@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# 1. Agar koi bina .html ke page khole (jaise /search), to use andar se .html file dikhaye
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# 2. Agar koi galti se pura URL .html ke sath khole, to use automatic bina .html wale URL par redirect kare
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
