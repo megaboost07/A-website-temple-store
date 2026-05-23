@@ -1,19 +1,4 @@
 User-agent: *
 Allow: /
 
-# Disallow admin and private paths
-Disallow: /admin/
-Disallow: /admin/dashboard.html
-
-# Sitemap location
 Sitemap: https://mega-store.in/sitemap.xml
-
-# Crawl-delay for bots
-Crawl-delay: 1
-
-# Block specific bots (optional)
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
